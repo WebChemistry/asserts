@@ -11,7 +11,7 @@ class FileSystemAssert {
 
 	public static function fileExists(string $filePath): void {
 		if (!@is_file($filePath)) {
-			throw new AssertionException("File '$filePath' not exists.");
+			throw new AssertionException(sprintf('File "%s" not exists.', $filePath));
 		}
 	}
 
